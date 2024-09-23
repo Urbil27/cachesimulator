@@ -8,12 +8,14 @@ import Nav from './components/Nav';
 import InstructionForm from './components/InstructionForm';
 import Footer from './components/Footer';
 import Table from './components/Table';
+import AddressBitCounter from './components/AddressBitCounter';
 function App() {
   return (
     <>
     <Modal/>
     <Nav/>
-    <div class="container mt-4">
+    <div className="container mt-4">
+      <AddressBitCounter/>
       <InstructionForm/>
       <Table/>
     </div>

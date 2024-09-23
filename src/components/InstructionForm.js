@@ -1,25 +1,27 @@
-
+function emulate(){
+  //TODO
+}
 function InstructionForm() {
     return (
         
-        <form action="" class="form-inline">
-        <div class="row">
-        <div class="col">
+        <form action="" className="form-inline">
+        <div className="row">
+        <div className="col">
           
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1"/>
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">@</span>
+            <input type="text" className="form-control" placeholder="Address" aria-label="Username" aria-describedby="basic-addon1"/>
           </div>
 
         </div>
-        <div class="col">
-          <select class="form-select" aria-label="Default select example">
+        <div className="col">
+          <select className="form-select" aria-label="Default select example">
             <option value="1">LD</option>
             <option value="2">ST</option>
           </select>
         </div>
-        <div class="col">
-          <button type="button" class="btn btn-outline-primary"><i class="bi bi-play"></i></button>
+        <div className="col">
+          <button type="button" className="btn btn-outline-primary"><i className="bi bi-play" onclick={emulate}></i></button>
 
         </div>
       </div>
