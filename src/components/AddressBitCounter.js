@@ -1,9 +1,28 @@
-//Inicializamos las variables
-var tagBits = 0;
-var setBits = 0;
-var wordBits = 0;
-var byteBits = 0;
-function AddressBitCounter() {
+import React from 'react';
+function getWordBits(wordSize, blockSize){
+return Math.log2(blockSize/wordSize);
+}
+function getByteBits(wordSize){
+  return Math.log2(wordSize);
+  
+}
+function getSetBits(setAmount){
+  return Math.log2(setAmount);
+}
+function getAddressBits(mmSize){
+  return Math.log2(mmSize)
+}
+function getTagBits(mmSize, setBits,wordBits,byteBits){
+  return getAddressBits(mmSize)-setBits-wordBits-byteBits;
+}
+function AddressBitCounter({formConfig}) {
+  //Inicializamos las variables
+const [tagBits, setTagBits] = React.useState(0); 
+const [setBits, setSetBits] = React.useState(0);
+const [wordBits, setWordBits] = React.useState(0);
+const [byteBits, setByteBits] = React.useState(0);
+
+console.log(formConfig);
     return (
         <>
 
@@ -27,10 +46,10 @@ function AddressBitCounter() {
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="tag">{tagBits}</th>
-            <td id="set">{setBits}</td>
-            <td id="word">{wordBits}</td>
-            <td id="">{byteBits}</td>
+            <th scope="row" id="tag">{getTagBits(formConfig.mainMemorySize,getSetBits(formConfig.cacheType),getWordBits(formConfig.wordSize,formConfig.blockSize),getByteBits(formConfig.wordSize))}</th>
+            <td id="set">{getSetBits(formConfig.cacheType)}</td>
+            <td id="word">{getWordBits(formConfig.wordSize,formConfig.blockSize)}</td>
+            <td id="">{getByteBits(formConfig.wordSize)}</td>
           </tr>
          </tbody>
          
