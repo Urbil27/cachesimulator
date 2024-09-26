@@ -6,16 +6,16 @@ function Table({formConfig}) {
 
   console.log(formConfig.cacheType);
   var component = <FullTable/>;
-  if (formConfig.cacheType == 0){
+  if (formConfig.cacheType === 0){
     component = <></>;
   }
-  else if(formConfig.cacheType == 1){
+  else if(formConfig.cacheType === 1){
     component = <DirectTable/>;
   }
-  else if (formConfig.cacheType == 2){
+  else if (formConfig.cacheType === 2){
     component = <TwoWayTable/>;
   }
-  else if (formConfig.cacheType == 4 ){
+  else if (formConfig.cacheType === 4 ){
     component = <FourWayTable/>;
   }
   return component;

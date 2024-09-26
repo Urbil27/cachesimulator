@@ -6,7 +6,6 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
 import Modal from './components/Modal';
 import Nav from './components/Nav';
 import InstructionForm from './components/InstructionForm';
-import Footer from './components/Footer';
 import Table from './components/Table';
 import AddressBitCounter from './components/AddressBitCounter';
 import { useState } from 'react';
