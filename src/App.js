@@ -21,7 +21,6 @@ function App() {
       <InstructionForm/>
       <Table formConfig={formConfig}/>
     </div>
-    <Footer/>
     </>
   );
 }

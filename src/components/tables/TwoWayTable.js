@@ -5,47 +5,132 @@ function TwoWayTable() {
         <thead>
           <tr>
             <th scope="col">@Byte</th>
-           
+            <td>hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">@Word</th>
-        
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">MM Block</th>
-            
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">Tag</th>
-  
+            <td>hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <th scope="row" rowSpan={5}>SET 0</th>
+           
           </tr>
           <tr>
-            <th scope="row">Memory state:</th>
-  
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
           </tr>
           <tr>
-            <th scope="row">SET 0</th>
-  
+          <td>Hola</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+            </tr>
+            <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            </tr>
+            <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+          <tr>
+            <th scope="row"rowSpan={5} >SET 1</th>
+            
           </tr>
           <tr>
-            <th scope="row">SET 1</th>
-  
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+          <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
+          <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+            <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
           
       
           <tr>
             <th scope="row">Miss/Hit</th>
-  
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">Cycles</th>
-  
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <th scope="row">Traffic</th>
-  
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>

@@ -40,3 +40,6 @@ footer{
   position: fixed;
   bottom: 0px;
 }
+table{
+  table-layout: fixed;
+}

@@ -5,19 +5,21 @@ import FullTable from './tables/FullTable.js';
 function Table({formConfig}) {
 
   console.log(formConfig.cacheType);
+  var component = <FullTable/>;
   if (formConfig.cacheType == 0){
-    return <></>;
+    component = <></>;
   }
   else if(formConfig.cacheType == 1){
-    return <DirectTable/>;
+    component = <DirectTable/>;
   }
   else if (formConfig.cacheType == 2){
-    return <TwoWayTable/>;
+    component = <TwoWayTable/>;
   }
   else if (formConfig.cacheType == 4 ){
-    return <FourWayTable/>;
+    component = <FourWayTable/>;
   }
-  return <FullTable/>;
+  return component;
+
   }
   
   export default Table;
