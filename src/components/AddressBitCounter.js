@@ -3,7 +3,11 @@ function getWordBits(wordSize, blockSize){
 return Math.log2(blockSize/wordSize);
 }
 function getByteBits(wordSize){
-  return Math.log2(wordSize);
+  if(wordSize!=null){
+    return Math.log2(wordSize);
+  }
+  return Math.log2(0);
+
   
 }
 function getSetBits(setAmount){

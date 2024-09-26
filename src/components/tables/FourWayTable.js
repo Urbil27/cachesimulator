@@ -26,14 +26,21 @@ function FourWayTable() {
     
             </tr>
             <tr>
-              <th scope="row">SET 0</th>
+              <th scope="row" rowspan="2">SET 00</th>
     
             </tr>
             <tr>
-              <th scope="row">SET 1</th>
+              <th scope="row" rowspan="2">SET 01</th>
     
             </tr>
-            
+            <tr>
+              <th scope="row" rowspan="2">SET 10</th>
+    
+            </tr>
+            <tr>
+              <th scope="row" rowspan="2">SET 11</th>
+    
+            </tr>
         
             <tr>
               <th scope="row">Miss/Hit</th>

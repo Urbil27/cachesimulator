@@ -27,17 +27,17 @@ function Modal({setFormConfig}) {
               
                 <div className="mb-3">
                   <label for="exampleInputEmail1" className="form-label">Main memory size</label>
-                  <input type="number" className="form-control" id="mainMemorySize" onChange={(e) => setMainMemorySize(e.target.value)}/>
+                  <input type="number" className="form-control" id="mainMemorySize" onChange={(e) => setMainMemorySize(e.target.value)} />
                 </div>
                 <label htmlFor="">Word size</label>
-                <select className="form-select" aria-label="Default select example" id="wordSizeSelector" onChange={(e) => setWordSize(e.target.value)}>
+                <select className="form-select" aria-label="Default select example" id="wordSizeSelector"  onChange={(e) => setWordSize(e.target.value)}>
                   <option selected>Select a word size</option>
                   <option value="4">Words of 4 bytes</option>
                   <option value="8">Words of 8 bytes</option>
                 </select>
     
                 <label htmlFor="">Block size</label>
-                <select className="form-select" aria-label="Default select example" id="blockSizeSelector" onChange={(e) => setBlockSize(e.target.value)}>
+                <select className="form-select" aria-label="Default select example" id="blockSizeSelector"  onChange={(e) => setBlockSize(e.target.value)}>
                   <option selected>Select a block size</option>
                   <option value="32">Blocks of 32 bytes</option>
                   <option value="64">Blocks of 64 bytes</option>
@@ -47,7 +47,7 @@ function Modal({setFormConfig}) {
                 <label htmlFor="">Cache type</label>
                 
                 <div clas="form-floating">
-                  <select className="form-select" aria-label="Default select example" id="cacheTypeSelector" onChange={(e) => setCacheType(e.target.value)}>
+                  <select className="form-select" aria-label="Default select example" id="cacheTypeSelector"  onChange={(e) => setCacheType(e.target.value)}>
                     <option selected>Choose the Cache type</option>
                     <option value="1">Direct</option>
                     <option value="2">2 way associative</option>
@@ -59,7 +59,7 @@ function Modal({setFormConfig}) {
     
                 <label htmlFor="replacementPolicySelector">Replacement policy</label>
     
-                <select className="form-select" aria-label="Default select example" id="replacementPolicySelector" onChange={(e) => setReplacementPolicy(e.target.value)}>
+                <select className="form-select" aria-label="Default select example" id="replacementPolicySelector"  onChange={(e) => setReplacementPolicy(e.target.value)}>
                   <option selected>Choose replacement policy</option>
                   <option value="1">LRU</option>
                   <option value="2">FIFO</option>

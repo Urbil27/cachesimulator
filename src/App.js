@@ -19,7 +19,7 @@ function App() {
     <div className="container mt-4">
       <AddressBitCounter formConfig={formConfig}/>
       <InstructionForm/>
-      <Table/>
+      <Table formConfig={formConfig}/>
     </div>
     <Footer/>
     </>

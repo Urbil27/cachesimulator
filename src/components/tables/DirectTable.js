@@ -11,7 +11,6 @@ function DirectTable() {
         <tbody>
           <tr>
             <th scope="row">@Word</th>
-        
           </tr>
           <tr>
             <th scope="row">MM Block</th>
