@@ -1,4 +1,10 @@
-function FullTable() {
+function FullTable({instructionList,formConfig}) {
+  //let byte = instructionData.address;
+  //let word = Math.floor(byte/formConfig.wordSize);
+  //let blockSizeInWords = formConfig.blockSize/formConfig.wordSize;
+  //let MMBlock = word%blockSizeInWords;
+  //let setAmount = 8/formConfig.cacheType;
+  //let tag = Math.floor(MMBlock/setAmount);
     return (
         <div className="row">
         <table className="table">
@@ -26,14 +32,37 @@ function FullTable() {
     
             </tr>
             <tr>
-              <th scope="row">SET 0</th>
+              <th scope="row">000</th>
     
             </tr>
             <tr>
-              <th scope="row">SET 1</th>
+              <th scope="row">001</th>
     
             </tr>
-            
+            <tr>
+              <th scope="row">010</th>
+    
+            </tr>
+            <tr>
+              <th scope="row">011</th>
+    
+            </tr>
+            <tr>
+              <th scope="row">100</th>
+    
+            </tr>
+            <tr>
+              <th scope="row">101</th>
+    
+            </tr>
+            <tr>
+              <th scope="row">110</th>
+    
+            </tr>
+            <tr>
+              <th scope="row">111</th>
+    
+            </tr>
         
             <tr>
               <th scope="row">Miss/Hit</th>

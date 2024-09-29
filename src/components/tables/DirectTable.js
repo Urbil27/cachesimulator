@@ -1,29 +1,55 @@
-function DirectTable() {
+import InstructionWord from "./tableSubComponents/InstructionWord";
+import InstructionByte from "./tableSubComponents/InstructionByte";
+import InstructionMMBlock from "./tableSubComponents/InstructionMMBlock";
+import InstructionTag from "./tableSubComponents/InstructionTag";
+function DirectTable({instructionList, formConfig}) {
+
+    console.log(instructionList)
+
     return (
         <div className="row">
       <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">@Byte</th>
-           
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">@Word</th>
-          </tr>
-          <tr>
-            <th scope="row">MM Block</th>
-            
-          </tr>
-          <tr>
-            <th scope="row">Tag</th>
-  
-          </tr>
-          <tr>
-            <th scope="row">Memory state:</th>
-  
-          </tr>
+      <thead>
+            <tr>
+              <th scope="col">@Byte</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionByte  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">@Word</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionWord  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+            <tr>
+              <th scope="row">MM Block</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionMMBlock  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+            <tr>
+              <th scope="row">Tag</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionTag  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+          
+          
           <tr>
             <th scope="row">000</th>
   

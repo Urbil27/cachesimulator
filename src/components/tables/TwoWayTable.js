@@ -1,6 +1,12 @@
-function TwoWayTable() {
+function FourWayTable({instructionList,formConfig}) {
+  //let byte = instructionData.address;
+  //let word = Math.floor(byte/formConfig.wordSize);
+  //let blockSizeInWords = formConfig.blockSize/formConfig.wordSize;
+  //let MMBlock = word%blockSizeInWords;
+  //let setAmount = 8/formConfig.cacheType;
+  //let tag = Math.floor(MMBlock/setAmount);
     return (
-        <div className="row">
+      <div className="row">
       <table className="table">
         <thead>
           <tr>
@@ -39,7 +45,7 @@ function TwoWayTable() {
           </tr>
           
           <tr>
-            <th scope="row" rowSpan={5}>SET 0</th>
+            <th scope="row" rowSpan={3}>SET 00</th>
            
           </tr>
           <tr>
@@ -56,24 +62,10 @@ function TwoWayTable() {
           <td></td>
           <td></td>
           <td></td>
-            </tr>
-            <tr>
-            <td>Hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-
-            </tr>
-            <tr>
-            <td>Hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </tr>
+          </tr>
+          
           <tr>
-            <th scope="row"rowSpan={5} >SET 1</th>
+            <th scope="row"rowSpan={3} >SET 01</th>
             
           </tr>
           <tr>
@@ -92,20 +84,43 @@ function TwoWayTable() {
             <td></td>
           </tr>
           <tr>
-            <td>Hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th scope="row"rowSpan={3} >SET 10</th>
+            
           </tr>
-            <tr>
+          <tr>
             <td>Hola</td>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
             </tr>
+          <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"rowSpan={3} >SET 11</th>
+            
+          </tr>
+          <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+          <tr>
+            <td>Hola</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
           
       
           <tr>
@@ -138,4 +153,4 @@ function TwoWayTable() {
     );
   }
   
-  export default TwoWayTable;
+  export default FourWayTable;

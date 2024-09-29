@@ -1,22 +1,25 @@
 import DirectTable from './tables/DirectTable.js';
-import TwoWayTable from './tables/TwoWayTable.js';
-import FourWayTable from './tables/FourWayTable.js';
+import TwoWayTable from './tables/FourWayTable.js';
+import FourWayTable from './tables/TwoWayTable.js';
 import FullTable from './tables/FullTable.js';
-function Table({formConfig}) {
+function Table({formConfig,instructionList}) {
 
-  console.log(formConfig.cacheType);
-  var component = <FullTable/>;
-  if (formConfig.cacheType === 0){
+  console.log("aaaaaaaaaaa");
+  
+
+  var component = <FullTable formConfig={formConfig} instructionList={instructionList}/>;
+
+  if (formConfig.cacheType == 0){
     component = <></>;
   }
-  else if(formConfig.cacheType === 1){
-    component = <DirectTable/>;
+  else if(formConfig.cacheType == 1){
+    component = <DirectTable formConfig={formConfig} instructionList={instructionList}/>;
   }
-  else if (formConfig.cacheType === 2){
-    component = <TwoWayTable/>;
+  else if (formConfig.cacheType == 2){
+    component = <TwoWayTable formConfig={formConfig} instructionList={instructionList}/>;
   }
-  else if (formConfig.cacheType === 4 ){
-    component = <FourWayTable/>;
+  else if (formConfig.cacheType == 4 ){
+    component = <FourWayTable formConfig={formConfig} instructionList={instructionList}/>;
   }
   return component;
 

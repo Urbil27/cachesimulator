@@ -10,8 +10,8 @@ function getByteBits(wordSize){
 
   
 }
-function getSetBits(setAmount){
-  return Math.log2(setAmount);
+function getSetBits(way){
+ return Math.log2(8/way);
 }
 function getAddressBits(mmSize){
   return Math.log2(mmSize)
@@ -20,11 +20,7 @@ function getTagBits(mmSize, setBits,wordBits,byteBits){
   return getAddressBits(mmSize)-setBits-wordBits-byteBits;
 }
 function AddressBitCounter({formConfig}) {
-  //Inicializamos las variables
-const [tagBits, setTagBits] = React.useState(0); 
-const [setBits, setSetBits] = React.useState(0);
-const [wordBits, setWordBits] = React.useState(0);
-const [byteBits, setByteBits] = React.useState(0);
+
 
 console.log(formConfig);
     return (
