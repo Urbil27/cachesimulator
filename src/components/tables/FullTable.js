@@ -1,3 +1,7 @@
+import InstructionWord from "./tableSubComponents/InstructionWord";
+import InstructionByte from "./tableSubComponents/InstructionByte";
+import InstructionMMBlock from "./tableSubComponents/InstructionMMBlock";
+import InstructionTag from "./tableSubComponents/InstructionTag";
 function FullTable({instructionList,formConfig}) {
   //let byte = instructionData.address;
   //let word = Math.floor(byte/formConfig.wordSize);
@@ -8,24 +12,44 @@ function FullTable({instructionList,formConfig}) {
     return (
         <div className="row">
         <table className="table">
-          <thead>
+        <thead>
             <tr>
               <th scope="col">@Byte</th>
-             
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionByte  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">@Word</th>
-          
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionWord  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
             </tr>
             <tr>
               <th scope="row">MM Block</th>
-              
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionMMBlock  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
             </tr>
             <tr>
               <th scope="row">Tag</th>
-    
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionTag  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
             </tr>
             <tr>
               <th scope="row">Memory state:</th>

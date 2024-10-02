@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-function InstructionForm({addInstruction}) {
+function InstructionForm({addInstruction, addBlockToDirectTable}) {
   const [address, setAddress] = useState(0);
   const [instruction, setInstruction] = useState(0);
 

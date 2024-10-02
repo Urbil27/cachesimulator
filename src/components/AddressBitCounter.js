@@ -16,8 +16,26 @@ function getSetBits(way){
 function getAddressBits(mmSize){
   return Math.log2(mmSize)
 }
-function getTagBits(mmSize, setBits,wordBits,byteBits){
-  return getAddressBits(mmSize)-setBits-wordBits-byteBits;
+function getTagBits(cacheType,mmSize, setBits,wordBits,byteBits){
+  if(cacheType!=1){//Checking the cache type
+    return getAddressBits(mmSize)-setBits-wordBits-byteBits;
+
+  }
+  else{
+    console.log("Direct");
+    return getAddressBits(mmSize)-wordBits-byteBits;
+
+  }
+
+  
+}
+function getSetOrBlock(formConfig){
+  if (formConfig.cacheType == 1){
+    return "Block";
+  }
+  else{
+    return "Set"
+  }
 }
 function AddressBitCounter({formConfig}) {
 
@@ -38,7 +56,7 @@ console.log(formConfig);
         <thead>
           <tr>
             <th scope="col">Tag</th>
-            <th scope="col">Set</th>
+            <th scope="col">{getSetOrBlock(formConfig)}</th>
             <th scope="col">Word</th>
             <th scope="col">Byte</th>
             
@@ -46,7 +64,7 @@ console.log(formConfig);
         </thead>
         <tbody>
           <tr>
-            <th scope="row" id="tag">{getTagBits(formConfig.mainMemorySize,getSetBits(formConfig.cacheType),getWordBits(formConfig.wordSize,formConfig.blockSize),getByteBits(formConfig.wordSize))}</th>
+            <th scope="row" id="tag">{getTagBits(formConfig.cacheType,formConfig.mainMemorySize,getSetBits(formConfig.cacheType),getWordBits(formConfig.wordSize,formConfig.blockSize),getByteBits(formConfig.wordSize))}</th>
             <td id="set">{getSetBits(formConfig.cacheType)}</td>
             <td id="word">{getWordBits(formConfig.wordSize,formConfig.blockSize)}</td>
             <td id="">{getByteBits(formConfig.wordSize)}</td>

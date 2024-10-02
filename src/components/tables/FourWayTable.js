@@ -1,3 +1,7 @@
+import InstructionWord from "./tableSubComponents/InstructionWord";
+import InstructionByte from "./tableSubComponents/InstructionByte";
+import InstructionMMBlock from "./tableSubComponents/InstructionMMBlock";
+import InstructionTag from "./tableSubComponents/InstructionTag";
 function TwoWayTable({instructionList,formConfig}) {
   //let byte = instructionData.address;
   //let word = Math.floor(byte/formConfig.wordSize);
@@ -8,41 +12,45 @@ function TwoWayTable({instructionList,formConfig}) {
     return (
         <div className="row">
       <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">@Byte</th>
-            <td>hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">@Word</th>
-            <td>Hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">MM Block</th>
-            <td>Hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th scope="row">Tag</th>
-            <td>hola</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+      <thead>
+            <tr>
+              <th scope="col">@Byte</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionByte  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">@Word</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionWord  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+            <tr>
+              <th scope="row">MM Block</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionMMBlock  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
+            <tr>
+              <th scope="row">Tag</th>
+              {
+                instructionList.map(
+                  (instruction) =>
+                    <InstructionTag  instructionData={instruction} formConfig={formConfig}/>
+                )
+              }
+            </tr>
           
           <tr>
             <th scope="row" rowSpan={5}>SET 0</th>

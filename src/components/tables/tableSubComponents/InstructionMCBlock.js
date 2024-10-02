@@ -1,4 +1,4 @@
-function InstructionMMBlock({ instructionData, formConfig }) {
+function InstructionMCBlock({ instructionData, formConfig }) {
     let byte = instructionData.address;
     let word = Math.floor(byte / formConfig.wordSize);
     let blockSizeInWords = formConfig.blockSize / formConfig.wordSize;
@@ -6,12 +6,13 @@ function InstructionMMBlock({ instructionData, formConfig }) {
     let MMBlock = Math.floor(word/blockSizeInWords)
     let setAmount = 8 / formConfig.cacheType;
     let tag = Math.floor(MMBlock / setAmount);
+    let block = MMBlock%8;
     return (
     
-            <td>{MMBlock} | {MMWord}</td>
+            <td>{block}</td>
             
         
     );
 }
 
-export default InstructionMMBlock;
+export default InstructionMCBlock;
