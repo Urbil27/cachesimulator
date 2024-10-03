@@ -12,10 +12,10 @@ function Table({formConfig,instructionList,blockLists, missAndHitList}) {
   else if(formConfig.cacheType == 1){
     component = <DirectTable formConfig={formConfig} instructionList={instructionList}  blockLists = {blockLists} missAndHitList={missAndHitList}/>;
   }
-  else if (formConfig.cacheType == 2){
+  else if (formConfig.cacheType == 4){
     component = <TwoWayTable formConfig={formConfig} instructionList={instructionList}/>;
   }
-  else if (formConfig.cacheType == 4 ){
+  else if (formConfig.cacheType == 2 ){
     component = <FourWayTable formConfig={formConfig} instructionList={instructionList}/>;
   }
   return component;
