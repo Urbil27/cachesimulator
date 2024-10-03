@@ -3,11 +3,11 @@ import InstructionByte from "./tableSubComponents/InstructionByte";
 import InstructionMMBlock from "./tableSubComponents/InstructionMMBlock";
 import InstructionMCBlock from "./tableSubComponents/InstructionMCBlock";
 import InstructionTag from "./tableSubComponents/InstructionTag";
-import { toBeDisabled } from "@testing-library/jest-dom/matchers";
-function DirectTable({instructionList, formConfig,blockLists, addBlockToDirectTable}) {
-    console.log(instructionList)
-    console.log(blockLists)
+import MissOrHit from "./tableSubComponents/MissOrHit";
 
+import { toBeDisabled } from "@testing-library/jest-dom/matchers";
+function DirectTable({instructionList, formConfig,blockLists, missAndHitList}) {
+    
     
     return (
         <div className="row">
@@ -57,7 +57,7 @@ function DirectTable({instructionList, formConfig,blockLists, addBlockToDirectTa
                 instructionList.map(
                   (instruction) =>
                   
-                    <InstructionTag  instructionData={instruction} formConfig={formConfig} addBlockToDirectTable={addBlockToDirectTable}/>
+                    <InstructionTag  instructionData={instruction} formConfig={formConfig}/>
                    
                     
                 )
@@ -163,7 +163,14 @@ function DirectTable({instructionList, formConfig,blockLists, addBlockToDirectTa
           </tr>
           <tr>
             <th scope="row">Miss/Hit</th>
-  
+
+            {
+              missAndHitList.map(
+                (hit) =>
+                    <MissOrHit hit={hit}/>                 
+              )
+            }
+              
           </tr>
           <tr>
             <th scope="row">Cycles</th>

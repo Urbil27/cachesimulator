@@ -22,7 +22,6 @@ function getTagBits(cacheType,mmSize, setBits,wordBits,byteBits){
 
   }
   else{
-    console.log("Direct");
     return getAddressBits(mmSize)-wordBits-byteBits;
 
   }
@@ -40,7 +39,6 @@ function getSetOrBlock(formConfig){
 function AddressBitCounter({formConfig}) {
 
 
-console.log(formConfig);
     return (
         <>
 
